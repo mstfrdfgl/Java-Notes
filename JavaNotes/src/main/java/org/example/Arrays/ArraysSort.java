@@ -12,6 +12,9 @@ public class ArraysSort {
         // Diziyi sıralayalım
         Arrays.sort(numbers);
 
+        // Sadece belirli index aralığındakileri sıralayalım
+        Arrays.sort(numbers, 1, 5);
+
         // Sıralama işleminden sonra diziyi yazdıralım
         System.out.println("Sıralama Sonrası: " + Arrays.toString(numbers));
     }

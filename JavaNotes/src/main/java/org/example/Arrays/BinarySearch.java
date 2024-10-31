@@ -7,7 +7,7 @@ public class BinarySearch {
         int[] numbers = {1, 3, 5, 7, 9};
 
         int searchValue = 5;
-
+        // Arrays.binarySearch sadece sıralı dizilerde uygulanabilir.
         // Dizinin sıralı olduğunu varsayarak binary search yapıyoruz
         int index = Arrays.binarySearch(numbers, searchValue);
         if (index >= 0) {
