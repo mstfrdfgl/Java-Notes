@@ -1,0 +1,110 @@
+# Java Collections: ArrayList ve LinkedList Kullanımı
+
+Bu belgede Java'da ArrayList ve LinkedList kullanımı ile ilgili işlemler ve örnekler yer almaktadır.
+
+## 1. ArrayList
+
+### 1.1. ArrayList Oluşturma
+ArrayList oluşturmak için aşağıdaki kodu kullanabilirsiniz:
+- `List<String> fruits = new ArrayList<>();`
+
+### 1.2. Eleman Ekleme
+Eleman eklemek için `add` metodunu kullanabilirsiniz:
+- `fruits.add("Apple");` // Listeye yeni eleman ekleme
+- `fruits.add(1, "Banana");` // Belirli bir pozisyona eleman ekleme
+
+### 1.3. Elemanları Alma ve Yazdırma
+Elemanları almak için `get` metodunu kullanabilirsiniz:
+- `String fruit = fruits.get(0);` // Belirli bir konumdaki elemana erişim
+- `System.out.println(fruit);` // Elemanı yazdırma
+
+### 1.4. Liste Boyutunu Alma
+Liste boyutunu almak için `size` metodunu kullanabilirsiniz:
+- `int size = fruits.size();` // Liste boyutunu döndürme
+
+### 1.5. Eleman Kaldırma
+Belirli bir elemanı kaldırmak için `remove` metodunu kullanabilirsiniz:
+- `fruits.remove("Banana");` // Belirli bir elemanı kaldırma
+
+### 1.6. Eleman Güncelleme (set)
+Elemanı güncellemek için `set` metodunu kullanabilirsiniz:
+- `fruits.set(0, "Orange");` // Belirtilen indeksteki elemanı değiştirme
+
+### 1.7. contains()
+Liste içinde bir elemanın olup olmadığını kontrol etmek için `contains` metodunu kullanabilirsiniz:
+- `boolean hasApple = fruits.contains("Apple");` // Bir elemanın listede olup olmadığını kontrol etme
+
+### 1.8. clear()
+Tüm elemanları temizlemek için `clear` metodunu kullanabilirsiniz:
+- `fruits.clear();` // Tüm elemanları temizler ve listeyi boş hale getirir
+
+### 1.9. Döngü ile Elemanları Yazdırma
+Döngü ile elemanları yazdırmak için:
+- `for (String fruit : fruits) { System.out.println(fruit); }` // Liste elemanlarını sırayla yazdırma
+
+### 1.10. isEmpty()
+Liste boşsa `true`, doluysa `false` döner:
+- `boolean isEmpty = fruits.isEmpty();` // Liste boşsa true, doluysa false döner
+
+### 1.11. indexOf()
+İlk bulduğu elemanın indeksini döner:
+- `int index = fruits.indexOf("Apple");` // İlk bulduğu elemanın indeksini döner
+
+### 1.12. lastIndexOf()
+Son bulduğu elemanın indeksini döner:
+- `int lastIndex = fruits.lastIndexOf("Apple");` // Son bulduğu elemanın indeksini döner
+
+### 1.13. toArray()
+Listeyi bir diziye dönüştürmek için:
+- `String[] fruitsArray = fruits.toArray(new String[0]);` // Listeyi bir diziye dönüştürme
+
+## 2. LinkedList
+
+### 2.1. Eleman Ekleme
+Eleman eklemek için:
+- `LinkedList<String> linkedList = new LinkedList<>();`
+- `linkedList.addFirst("Apple");` // Başa eleman ekleme
+- `linkedList.addLast("Banana");` // Sona eleman ekleme
+- `linkedList.add(1, "Orange");` // Belirli bir pozisyona eleman ekleme
+
+### 2.2. Eleman Kaldırma
+Eleman kaldırmak için:
+- `linkedList.removeFirst();` // İlk elemanı silme
+- `linkedList.removeLast();` // Son elemanı silme
+- `linkedList.remove("Apple");` // Belirli bir değeri içeren elemanı silme
+
+### 2.3. Eleman Alma
+Eleman almak için:
+- `String firstFruit = linkedList.getFirst();` // İlk elemanı alma
+- `String lastFruit = linkedList.getLast();` // Son elemanı alma
+
+### 2.4. Kuyruk İşlemleri
+Kuyruk işlemleri için:
+- `linkedList.offer("Mango");` // Kuyruğun sonuna eleman ekler
+- `String head = linkedList.poll();` // Kuyruğun başındaki elemanı çıkarır
+- `String peekHead = linkedList.peek();` // Kuyruğun başındaki elemanı döner
+
+## 3. Iterator Arayüzü
+
+- Java'nın `java.util` paketinde bulunur.
+- Koleksiyonları döngü ile gezmek için `hasNext()` ve `next()` metotlarını kullanır.
+- Elemanları silmek için `remove()` metodunu sağlar.
+
+## 4. Autoboxing ve Unboxing
+
+### 4.1. Autoboxing
+Primitive veri türünün otomatik olarak nesne türüne dönüştürülmesi:
+- `int primitiveInt = 10;`
+- `Integer wrappedInt = primitiveInt;` // int otomatik olarak Integer nesnesine dönüştürülür
+
+### 4.2. Unboxing
+Nesne türünün otomatik olarak primitive türüne dönüştürülmesi:
+- `Integer anotherWrappedInt = 20;`
+- `int unwrappedInt = anotherWrappedInt;` // Integer otomatik olarak int türüne dönüştürülür
+
+## 5. List Kullanımı
+
+```java
+List<Integer> integerList = new ArrayList<>();
+integerList.add(wrappedInt); // Autoboxing ile Integer nesnesini ekleme
+integerList.add(unwrappedInt); // Unboxing ile int türünü ekleme

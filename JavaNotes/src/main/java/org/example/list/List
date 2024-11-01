@@ -1,0 +1,47 @@
+ArrayList Oluşturma: List<String> fruits = new ArrayList<>(); ile ArrayList oluşturur ve eleman tipini String olarak belirleriz.
+Eleman Ekleme: add metodu ile listeye yeni eleman ekleyebiliriz. Belirli bir pozisyona eklemek için add(index, element) kullanılır.
+Elemanları Alma ve Yazdırma: get(index) ile belirli bir konumdaki elemana erişiriz.
+Liste Boyutunu Alma: size() metodu liste boyutunu döndürür.
+Eleman Kaldırma: remove(element) ile belirli bir elemanı kaldırabiliriz.
+Eleman Güncelleme (set): set(index, element) ile belirtilen indeksteki elemanı değiştiririz.
+contains(): contains(element) ile bir elemanın listede olup olmadığını kontrol ederiz.
+clear(): clear() metodu tüm elemanları temizler ve listeyi boş hale getirir.
+Döngü ile Elemanları Yazdırma: for-each döngüsü kullanarak liste elemanlarını sırayla yazdırabiliriz.
+isEmpty(): Liste boşsa true, doluysa false döner.
+indexOf(): İlk bulduğu element'in indeksini döner. Bulamazsa -1 döner.
+lastIndexOf(): Listede son bulduğu element'in indeksini döner.
+toArray(): Listeyi bir diziye dönüştürür, bu şekilde elemanları bir String dizisi gibi kullanabiliriz.
+
+**LinkedList**
+
+addFirst() ve addLast() metodları ile elemanları sırasıyla başa ve sona ekleyebiliriz.
+add(index, element) metodu ile belirli bir pozisyona eleman eklemek mümkündür.
+removeFirst() ve removeLast() metodları baştan ve sondan eleman çıkarmak için kullanılır.
+remove(element) belirli bir değeri içeren elemanı çıkarmak için kullanılır, ve ilk bulduğu değeri çıkarır.
+getFirst() ve getLast() metodları ile LinkedList’in ilk ve son elemanlarını hızlıca alabiliriz.
+offer(E e): Kuyruğun sonuna eleman ekler.
+poll(): Kuyruğun başındaki elemanı çıkarır ve döner. Kuyruk boşsa null döner.
+peek(): Kuyruğun başındaki elemanı döner, fakat çıkarmadan bırakır.
+addFirst(E e) / addLast(E e): Başa ve sona eleman ekler.
+removeFirst() / removeLast(): Baştan ve sondan eleman çıkarır.
+getFirst() / getLast(): Baştaki ve sondaki elemanı döner (çıkarmadan).
+
+*Iterator Arayüzü*
+Java'nın java.util paketinde bulunur.
+Koleksiyonları döngü ile gezmek için hasNext() ve next() metotlarını kullanır.
+Elemanları silmek için remove() metodunu sağlar.
+
+*Autoboxing:*
+
+int primitiveInt = 10; ifadesiyle bir temel veri türü tanımlıyoruz.
+Integer wrappedInt = primitiveInt; ifadesinde, int türündeki primitiveInt değişkeni otomatik olarak Integer nesnesine dönüştürülüyor.
+
+*Unboxing:*
+
+Integer anotherWrappedInt = 20; ile bir Integer nesnesi oluşturuyoruz.
+int unwrappedInt = anotherWrappedInt; ifadesinde, Integer nesnesi otomatik olarak int türüne dönüştürülüyor.
+
+*List Kullanımı:*
+
+List<Integer> kullanarak Integer nesnelerini saklıyoruz.
+integerList.add(wrappedInt); ve integerList.add(unwrappedInt); ifadeleri ile Integer nesnelerini listeye ekliyoruz. Burada autoboxing ve unboxing işlemleri otomatik olarak gerçekleşiyor.

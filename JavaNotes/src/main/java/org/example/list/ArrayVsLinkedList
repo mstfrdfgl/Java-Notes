@@ -1,0 +1,12 @@
+**ArrayList:**
+
+Dinamik boyutludur, eleman eklendikçe veya çıkarıldıkça boyutu otomatik olarak artar veya azalır.
+Belirli bir kapasiteye ulaştığında kapasitesini ikiye katlayarak genişler (örn. 10 elemanlık bir ArrayList dolduğunda yeni bir dizi oluşturarak elemanları kopyalar).
+Doğrudan erişim için verimli (O(1)) olsa da ekleme ve çıkarmada bazen yeniden boyutlandırma gerekir (O(n)).
+
+
+**LinkedList:**
+
+Bellekte birbirinden bağımsız olarak düğümler halinde yer tutar.
+Her düğüm, hem kendi verisini hem de bir sonraki düğümün referansını saklar.
+İndekse göre erişim yavaştır (O(n)) çünkü listeyi baştan sona taramak gerekir. Ancak başa veya sona ekleme hızlıdır (O(1)).

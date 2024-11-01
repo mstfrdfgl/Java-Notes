@@ -1,7 +1,8 @@
 package org.example.algorithms;
 
 import java.util.Arrays;
-import java.util.Random;
+
+import static org.example.functions.RandomArray.getRandomArray;
 
 public class ReverseSortArray {
     public static void main(String[] args) {
@@ -11,14 +12,14 @@ public class ReverseSortArray {
         System.out.println("reversed sort array: " + Arrays.toString(reversedArr));
     }
 
-    public static int[] getRandomArray(int len) {
-        Random random = new Random();
-        int[] arr = new int[len];
-        for (int i = 0; i < len; i++) {
-            arr[i] = random.nextInt(100);
-        }
-        return arr;
-    }
+//    public static int[] getRandomArray(int len) {
+//        Random random = new Random();
+//        int[] arr = new int[len];
+//        for (int i = 0; i < len; i++) {
+//            arr[i] = random.nextInt(100);
+//        }
+//        return arr;
+//    }
 
     public static int[] getReversedSortArray(int[] arr) {
         Arrays.sort(arr);
